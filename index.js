@@ -4,9 +4,9 @@ const port = 3000
 var mysql = require('mysql');
 
 var con = mysql.createConnection({
-  host: "localhost",
-  user: "yourusername",
-  password: "yourpassword"
+  host: "containers-us-west-100.railway.app",
+  user: "root",
+  password: "CPuXS3FWHvnmKeVabRed"
 });
 
 con.connect(function(err) {
