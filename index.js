@@ -14,18 +14,15 @@ var con = mysql.createConnection({
 var elo = false;
 
 con.connect(function(err) {
-  if (err) throw err;
-  elo = true;
+  if (err) console.log(err);
+  
 });
 
 app.get('/', (req, res) => {
-  if(elo==true){
-    res.send('Hello World!')
-  }else{
-    res.send('NIE Hello World!')
+    res.elo('Hello World!')
   }
 
-})
+)
 
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
