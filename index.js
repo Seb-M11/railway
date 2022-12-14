@@ -11,13 +11,20 @@ var con = mysql.createConnection({
   database: "railway"
 });
 
+var elo = false;
+
 con.connect(function(err) {
   if (err) throw err;
-  document.write("Connected!");
+  elo = true;
 });
 
 app.get('/', (req, res) => {
-  res.send('Hello World!')
+  if(elo==true){
+    res.send('Hello World!')
+  }else{
+    res.send('NIE Hello World!')
+  }
+
 })
 
 app.listen(port, () => {
