@@ -11,15 +11,13 @@ var con = mysql.createConnection({
   database: "railway"
 });
 
-var elo = false;
-
 con.connect(function(err) {
   if (err) console.log(err);
   
 });
 
 app.get('/', (req, res) => {
-    res.elo('Hello World!')
+    res.send('elo')
   }
 
 )
