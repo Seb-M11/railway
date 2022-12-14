@@ -11,16 +11,15 @@ var con = mysql.createConnection({
   database: "railway"
 });
 
+
 con.connect(function(err) {
-  if (err) console.log(err);
-  
+  if (err) throw err;
+  console.log("Connected!");
 });
 
 app.get('/', (req, res) => {
-    res.send('elo')
-  }
-
-)
+  res.send('Hello World!')
+})
 
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
