@@ -8,7 +8,8 @@ var con = mysql.createConnection({
   host: "containers-us-west-100.railway.app",
   user: "root",
   password: "CPuXS3FWHvnmKeVabRed",
-  database: "railway"
+  database: "railway",
+  port: 6503
 });
 
 
