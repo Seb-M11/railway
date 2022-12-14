@@ -11,10 +11,9 @@ var con = mysql.createConnection({
   database: "railway"
 });
 
-
 con.connect(function(err) {
   if (err) throw err;
-  console.log("Connected!");
+  document.write("Connected!");
 });
 
 app.get('/', (req, res) => {
