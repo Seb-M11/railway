@@ -16,7 +16,7 @@ app.get('/', (req, res) => {
     if (err) throw err;
     con.query("SELECT * FROM elo", function (err, result, fields) {
       if (err) throw err;
-      document.write(result);
+      res.send(result);
     });
   });
 })
