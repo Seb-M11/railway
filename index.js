@@ -24,7 +24,7 @@ var con = mysql.createConnection({
 app.get('/', (req, res) => {
   con.connect(function(err) {
     if (err) throw err;
-    console.log("Connected!");
+    res.send("Connected!");
   });
    /* con.connect(function(err) {
         if (err) throw err;
