@@ -22,17 +22,13 @@ var con = mysql.createConnection({
 
 
 app.get('/', (req, res) => {
-  con.connect(function(err) {
-    if (err) throw err;
-    res.send("Connected!");
-  });
-   /* con.connect(function(err) {
+   con.connect(function(err) {
         if (err) throw err;
         con.query("SELECT * FROM elo", function (err, result, fields) {
           if (err) throw err;
           res.send(result);
         });
-      });*/
+      });
 })
 
 app.listen(port, () => {
