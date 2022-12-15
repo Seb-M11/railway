@@ -27,7 +27,7 @@ var con = mysql.createConnection({
 
 
 app.get('/', (req, res) => {
-
+    res.send("elo")
 })
 
 app.listen(port, () => {
