@@ -12,23 +12,24 @@ var mysql = require('mysql');
 });*/
 
 
-var con = mysql.createConnection({
+/*var con = mysql.createConnection({
     host: "containers-us-west-100.railway.app",
     user: "root",
     password: "CPuXS3FWHvnmKeVabRed",
     database: "railway",
-  });
+  });*/
 
 
 
 app.get('/', (req, res) => {
-    con.connect(function(err) {
+   /* con.connect(function(err) {
         if (err) throw err;
         con.query("SELECT * FROM elo", function (err, result, fields) {
           if (err) throw err;
           res.send(result);
         });
-      });
+      });*/
+      res.send("elo")
 })
 
 app.listen(port, () => {
