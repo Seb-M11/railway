@@ -20,15 +20,14 @@ var con = mysql.createConnection({
   });
 
 
+  con.connect(function(err) {
+    if (err) throw err;
+    console.log("Connected!");
+  });
+
 
 app.get('/', (req, res) => {
-   con.connect(function(err) {
-        if (err) throw err;
-        con.query("SELECT * FROM elo", function (err, result, fields) {
-          if (err) throw err;
-          console.log(result);
-        });
-      });
+
 })
 
 app.listen(port, () => {
