@@ -33,7 +33,6 @@ app.get('/', (req, res) => {
           res.send(result);
         });
       });*/
-      res.send("elo")
 })
 
 app.listen(port, () => {
