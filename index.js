@@ -11,14 +11,14 @@ var con = mysql.createConnection({
   database: "railway",
 });
 
-
-con.connect(function(err) {
-  if (err) throw err;
-  console.log("Connected!");
-});
-
 app.get('/', (req, res) => {
-  res.send('Hello World!')
+  con.connect(function(err) {
+    if (err) throw err;
+    con.query("SELECT * FROM elo", function (err, result, fields) {
+      if (err) throw err;
+      document.write(result);
+    });
+  });
 })
 
 app.listen(port, () => {
