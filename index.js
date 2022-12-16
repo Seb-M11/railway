@@ -10,21 +10,28 @@ var db = process.env.DB_NAME || "elo"
 var port1 = process.env.DB_PORT || 3306
 
 
-var con = mysql.createConnection({
+/*var host = process.env.DB_HOST 
+var user = process.env.DB_USER 
+var password = process.env.DB_PASSWORD
+var db = process.env.DB_NAME 
+var port1 = process.env.DB_PORT*/
+
+/*var con = mysql.createConnection({
   host: host,
   user: user,
   password: password,
   database: db,
   port: port1
-});
+});*/
 
-/*var con = mysql.createConnection({
+
+var con = mysql.createConnection({
     host: "containers-us-west-155.railway.app",
     user: "root",
     password: "6Ld3S1lwE0F6OhC0wOcw",
     database: "railway",
-    post: 7792
-  });*/
+    port: 7792
+  });
 
 
   con.connect(function(err) {
@@ -34,8 +41,13 @@ var con = mysql.createConnection({
 
 
 app.get('/', (req, res) => {
-    res.send("elo")
-})
+  res.send("elo")
+    con.query("SELECT * FROM elo", function (err, result, fields) {
+      if (err) throw err;
+      console.log(result);
+    });
+  })
+
 
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
