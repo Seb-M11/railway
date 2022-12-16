@@ -13,17 +13,18 @@ var mysql = require('mysql');
 
 
 var con = mysql.createConnection({
-    host: "containers-us-west-100.railway.app",
+    host: "containers-us-west-155.railway.app",
     user: "root",
-    password: "CPuXS3FWHvnmKeVabRed",
-    database: "railway"
+    password: "6Ld3S1lwE0F6OhC0wOcw",
+    database: "railway",
+    post: 7792
   });
 
 
-  /*con.connect(function(err) {
+  con.connect(function(err) {
     if (err) throw err;
     console.log("Connected!");
-  });*/
+  });
 
 
 app.get('/', (req, res) => {
