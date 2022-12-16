@@ -5,11 +5,11 @@ var mysql = require('mysql');
 
 
 var con = mysql.createConnection({
-  host: process.env.MYSQLHOST || "localhost",
-  user: process.env.MYSQLUSER || "root",
-  password: process.env.MYSQLPASSWORD || "",
-  database: process.env.MYSQLDATABASE || "elo",
-  port: process.env.MYSQLPORT || 3306
+  host: process.env.DB_HOST || "localhost",
+  user: process.env.DB_USER|| "root",
+  password: process.env.DB_PASSWORD || "",
+  database: process.env.DB_NAME || "elo",
+  port: process.env.DB_PORT || 3306
 });
 
 
