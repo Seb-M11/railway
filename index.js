@@ -44,6 +44,8 @@ app.get('/', (req, res) => {
     con.query("SELECT * FROM elo", function (err, result, fields) {
       if (err) throw err;
       res.send(result);
+      //console.log(result.RowDataPacket[0]);
+      console.log(result[0].id);
     });
   })
 
