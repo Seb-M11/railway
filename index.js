@@ -8,7 +8,8 @@ var con = mysql.createConnection({
   host: process.env.MYSQLHOST || "localhost",
   user: process.env.MYSQLUSER || "root",
   password: process.env.MYSQLPASSWORD || "",
-  database: process.env.MYSQLDATABASE || "elo"
+  database: process.env.MYSQLDATABASE || "elo",
+  port: process.env.MYSQLPORT || 3306
 });
 
 
