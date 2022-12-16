@@ -3,13 +3,18 @@ const app = express()
 const port = 3000
 var mysql = require('mysql');
 
+var host = process.env.DB_HOST || "localhost"
+var user = process.env.DB_USER || "root"
+var password = process.env.DB_PASSWORD || ""
+var db = process.env.DB_NAME || "elo"
+var port1 = process.env.DB_PORT || 3306
 
 var con = mysql.createConnection({
-  host: process.env.DB_HOST,
-  user: process.env.DB_USER,
-  password: process.env.DB_PASSWORD,
-  database: process.env.DB_NAME,
-  port: process.env.DB_PORT
+  host: host,
+  user: user,
+  password: password,
+  database: db,
+  port: port1
 });
 
 /*var con = mysql.createConnection({
@@ -21,10 +26,10 @@ var con = mysql.createConnection({
   });*/
 
 
-  con.connect(function(err) {
+  /*con.connect(function(err) {
     if (err) throw err;
     console.log("Connected!");
-  });
+  });*/
 
 
 app.get('/', (req, res) => {
