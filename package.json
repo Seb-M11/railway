@@ -1,16 +1,27 @@
 {
-  "name": "railway",
+  "name": "codingnight-2022",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/K0S4/CodingNight-2022.git"
+  },
   "author": "",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/K0S4/CodingNight-2022/issues"
+  },
+  "homepage": "https://github.com/K0S4/CodingNight-2022#readme",
   "dependencies": {
+    "bcrypt": "^5.1.0",
+    "body-parser": "^1.20.1",
+    "ejs": "^3.1.8",
     "express": "^4.18.2",
-    "mysql": "github:mysqljs/mysql",
-    "mysql2": "^2.3.3"
+    "mysql": "^2.18.1",
+    "nodemon": "^2.0.20"
   }
 }
