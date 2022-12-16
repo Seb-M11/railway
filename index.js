@@ -6,9 +6,9 @@ var mysql = require('mysql');
 
 var con = mysql.createConnection({
   host: process.env.DB_HOST || "localhost",
-  user: process.env.DB_USER|| "root",
+  user: process.env.DB_USER || "root",
   password: process.env.DB_PASSWORD || "",
-  database: process.env.DB_NAME || "elo",
+  database: process.env.DB_NAME|| "elo",
   port: process.env.DB_PORT || 3306
 });
 
